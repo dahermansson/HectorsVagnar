@@ -1,0 +1,8 @@
+﻿@page "/Settings"
+
+<h3>Settings</h3>
+
+<EditForm Model="@MinaInstallningar">
+    <InputText id="Email" @bind-Value="MinaInstallningar.Email"></InputText>
+    <button type="submit">Spara</button>
+</EditForm>
