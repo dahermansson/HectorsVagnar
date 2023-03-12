@@ -28,7 +28,7 @@
         <div class="col"><button class="btn btn-secondary p-4 m-1" @onclick="AddVagn">OK</button></div>
     </div>
     <div class="row">
-        <dev class="col"><a class="btn btn-danger p-4 m-1" href=@String.Format("mailto:da.hermansson@cgi.com?body={0}", String.Join(HttpUtility.UrlEncode(Environment.NewLine), Vagnar))>Skapa Epost</a></dev>
+        <dev class="col"><a class="btn btn-danger p-4 m-1" href=@String.Format("mailto:{0}?body={1}", Epost, String.Join(HttpUtility.UrlEncode(Environment.NewLine), Vagnar))>Skapa Epost</a></dev>
     </div>
 </div>
 

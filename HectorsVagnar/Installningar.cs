@@ -2,6 +2,7 @@
 {
     public class Installningar
     {
-        public string Email { get; set; } = string.Empty;
+        public string Epost { get; set; } = string.Empty;
+        public List<string> Vagnar { get; set; } = new();
     }
 }

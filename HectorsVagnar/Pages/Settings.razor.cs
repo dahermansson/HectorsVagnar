@@ -5,23 +5,20 @@ using Microsoft.AspNetCore.Components.Forms;
 namespace HectorsVagnar.Pages;
 public partial class Settings
 {
-    private const string SettingsKey = "MinaInstallningar";
-
-    public Installningar MinaInstallningar { get; set; } = new();
-    
+    public Installningar MinaInstallningar { get; set; } = new Installningar();
 
     [Inject]
-    private ILocalStorageService _localStarageService { get; set; } = default!;
+    private ISettingsService _settingsService { get; set; } = default!;
     protected override async Task OnInitializedAsync()
     {
-        MinaInstallningar = await _localStarageService.GetItemAsync<Installningar>(SettingsKey);
+        MinaInstallningar = await _settingsService.Load();
     }
 
-    private void HandleSubmit(EditContext installningar)
+    private async void HandleSubmit()
     {
-        if (installningar == null)
+        if (MinaInstallningar != null)
         {
-                
+            await _settingsService.Save(MinaInstallningar);
         }
     }
 }

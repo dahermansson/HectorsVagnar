@@ -2,7 +2,8 @@
 
 <h3>Settings</h3>
 
-<EditForm Model="@MinaInstallningar">
-    <InputText id="Email" @bind-Value="MinaInstallningar.Email"></InputText>
-    <button type="submit">Spara</button>
+<EditForm Model=MinaInstallningar OnSubmit="@HandleSubmit">
+    <InputText id="name" @bind-Value="MinaInstallningar.Epost" />
+
+    <button type="submit">Submit</button>
 </EditForm>
