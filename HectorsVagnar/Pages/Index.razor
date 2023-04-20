@@ -3,6 +3,9 @@
 @using System.Web;
 
 <PageTitle>Index</PageTitle>
+<div class="row">
+    <InputText id="TagNr" @bind-Value="TagNr" />
+</div>
 
 <h2 role="heading">VagnsId: @CurrenInput</h2>
 
@@ -28,7 +31,8 @@
         <div class="col"><button class="btn btn-secondary p-4 m-1" @onclick="AddVagn">OK</button></div>
     </div>
     <div class="row">
-        <dev class="col"><a class="btn btn-danger p-4 m-1" href=@String.Format("mailto:{0}?body={1}", Epost, String.Join(HttpUtility.UrlEncode(Environment.NewLine), Vagnar))>Skapa Epost</a></dev>
+        <div class="col"><a class="btn btn-danger p-4 m-1" href=@String.Format("mailto:{0}?body={1}&subject=Lastat: {2}", Epost, GetVagnarString(), TagNr)>Lastat</a></div>
+        <div class="col"><a class="btn btn-danger p-4 m-1" href=@String.Format("mailto:{0}?body={1}&subject=Olastat: {2}", Epost, GetVagnarString(), TagNr)>Olastat</a></div>
     </div>
 </div>
 
