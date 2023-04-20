@@ -205,6 +205,10 @@
       "url": "HectorsVagnar.styles.css"
     },
     {
+      "hash": "sha256-8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U=",
+      "url": ".nojekyll"
+    },
+    {
       "hash": "sha256-uhotZszkBLq\/V8xt8UtpU6lGHEIqbqLsFUVGyelV2TU=",
       "url": "css\/app.css"
     },
@@ -265,7 +269,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-gSTMRzvccDBTtavhuOaxM8GB306qVEnJaV4GUh2zvIE=",
+      "hash": "sha256-KYNzEeDWy1ksLDq3I2Iygd4l9J\/efGklzhcdDqn8wQc=",
       "url": "index.html"
     },
     {
@@ -277,5 +281,5 @@
       "url": "sample-data\/weather.json"
     }
   ],
-  "version": "jVHSM8U+"
+  "version": "PG+W7xnn"
 };
