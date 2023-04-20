@@ -13,11 +13,11 @@ jobs:
        - name: Setup .NET Core SDK
          uses: actions/setup-dotnet@v1
          with:
-           dotnet-version: 6.0.x
+           dotnet-version: 7.0.x
           
        # publishes Blazor project to the release-folder
        - name: Publish .NET Core Project
-         run: dotnet publish CompUtils.csproj -c Release -o release --nologo
+         run: dotnet publish HectorsVagnar.csproj -c Release -o release --nologo
       
        - name: Commit wwwroot to GitHub Pages
          uses: JamesIves/github-pages-deploy-action@3.7.1
