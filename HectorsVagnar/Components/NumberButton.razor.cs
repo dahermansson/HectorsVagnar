@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Components;
-
 namespace HectorsVagnar.Components;
 
 public partial class NumberButton

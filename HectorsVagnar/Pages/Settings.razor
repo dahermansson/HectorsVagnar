@@ -1,9 +1,25 @@
 ﻿@page "/Settings"
 
-<h3>Settings</h3>
+<h3>Inställningar</h3>
 
-<EditForm Model=MinaInstallningar OnSubmit="@HandleSubmit">
-    <InputText id="name" @bind-Value="MinaInstallningar.Epost" />
-
-    <button type="submit">Submit</button>
+<EditForm class="container" Model=MinaInstallningar OnSubmit="@HandleSubmit">
+    <div class="mb-3">
+        <label for="Epostadress" class="form-label">Epostadress</label>
+        <InputText class="form-control" id="Epostadress" @bind-Value="MinaInstallningar.Epost" placeholder="namn@epost.com" />
+    </div>
+    <div class="mb-3">
+        <label for="Mailmall" class="form-label">Mail</label>
+        <InputTextArea rows="12" class="form-control" id="Mailmall" @bind-Value="MinaInstallningar.MailMall" />
+    </div>
+    <div class="mb-3">
+        <button class="btn btn-primary m-4" type="submit">Spara</button>
+    </div>
 </EditForm>
+
+
+<p class="lead">Platshållare: </p>
+<ul>
+    <li>{lastatEllerEj}</li>
+    <li>{lok}</li>
+    <li>{vagnar}</li>
+</ul>
