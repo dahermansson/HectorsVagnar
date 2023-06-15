@@ -9,17 +9,23 @@ h1:focus {
 }
 
 a, .btn-link {
-    color: #0071c1;
+    color: #0f0f0f;
 }
 
 .btn-primary {
+    color: #0f0f0f;
+    background-color: #ffB700;
+    border-color: #ffB700;
+}
+
+.btn-danger {
     color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
+    background-color: #0f0f0f;
+    border-color: #0f0f0f;
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #ffB700;
 }
 
 .content {
