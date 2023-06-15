@@ -36,8 +36,8 @@
     </div>
     <div class="row">
         <div class="col"><NumberButton Value="C" Callback="ButtonClicked"></NumberButton></div>
-        <div class="col"><a class="btn btn-danger p-4 m-1" href=@EpostMall>Lastat</a></div>
-        <div class="col"><a class="btn btn-danger p-4 m-1" @onclick:preventDefault onclick=@(() => String.Format("mailto:{0}?body={1}&subject=Olastat: {2}", Epostadress, GetMailFromMall(false), TagNr))>Olastat</a></div>
+        <div class="col"><a class="btn btn-danger p-4 m-1" href=@EpostMallLastat>Lastat</a></div>
+        <div class="col"><a class="btn btn-danger p-4 m-1" href=@EpostMallOlastat>Olastat</a></div>
     </div>
 </div>
 

@@ -5,11 +5,11 @@ namespace HectorsVagnar.Pages;
 
 public partial class Index
 {
-    private List<string> Vagnar = new();
+    private readonly List<string> Vagnar = new();
     private string Lok = "";
     private string CurrenInput { get; set; } = string.Empty;
-    private string Epostadress { get; set; } = string.Empty;
-    private string EpostMall => String.Format("mailto:{0}?body={1}&subject=Lastat: {2}", Epostadress, GetMailFromMall(true), TagNr);
+    private string EpostMallOlastat => String.Format("mailto:{0}?body={1}&subject=Lastat: {2}", Installningar?.Epost, GetMailFromMall(false), TagNr);
+    private string EpostMallLastat => String.Format("mailto:{0}?body={1}&subject=Lastat: {2}", Installningar?.Epost, GetMailFromMall(true), TagNr);
     private string TagNr { get; set; } = string.Empty;
     private Installningar Installningar { get; set; } = null!;
     [Inject]
@@ -52,7 +52,7 @@ public partial class Index
             CurrenInput += value;
             if (CurrenInput.Length == 4 && !(CurrenInput.Contains('T') || CurrenInput.Contains('.')))
                 AddVagn();
-            if ((CurrenInput.Length == 7 && (CurrenInput.Contains('T') || CurrenInput.Contains('.'))))
+            if (CurrenInput.Length == 7 && (CurrenInput.Contains('T') || CurrenInput.Contains('.')))
                 AddLok();
         }
     }
@@ -60,12 +60,12 @@ public partial class Index
     private string GetMailFromMall(bool lastat)
     {
         var mall = Installningar?.MailMall ?? string.Empty;
-        var mail = mall.Replace("{lastatEllerEj}", lastat ? "Lastade vagnar" : "Tomma vagnar").Replace("{Lok}", Lok).Replace("{Vagnar}", GetVagnarString());
-        return mail;
+        var mail = mall.Replace("{lastatEllerEj}", lastat ? "Lastade vagnar" : "Tomma vagnar").Replace("{lok}", Lok).Replace("{vagnar}", GetVagnarString());
+        return HttpUtility.UrlEncode(mail.Replace("\n", Environment.NewLine)).Replace("+", HttpUtility.HtmlEncode(" "));
     }
     private string GetVagnarString()
     {
         var grupper = Vagnar.Select((vagn, index) => new { vagn, index }).GroupBy(x => x.index / 5, i => i.vagn).ToList();
-        return HttpUtility.UrlEncode(string.Join($"{Environment.NewLine}{Environment.NewLine}", grupper.Select(t => string.Join(Environment.NewLine, t))));
+        return string.Join($"\n\n", grupper.Select(t => string.Join("\n", t)));
     }
 }
