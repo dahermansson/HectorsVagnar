@@ -12,16 +12,21 @@ a, .btn-link {
     color: #0f0f0f;
 }
 
+.nav-link {
+    color: #000000;
+}
+
 .btn-primary, .btn-primary:focus {
     color: #0f0f0f;
-    background-color: #ffB700;
+    background-color: #ffb700;
     border-color: #ffB700;
 }
-.btn-primary:hover {
-    color: #0f0f0f;
-    background-color: #ce9f1e;
-    border-color: #ce9f1e;
-}
+
+    .btn-primary:hover {
+        color: #0f0f0f;
+        background-color: #ce9f1e;
+        border-color: #ce9f1e;
+    }
 
 .btn-danger, .btn-danger:focus, .btn-danger:hover {
     color: #fff;
@@ -30,7 +35,7 @@ a, .btn-link {
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #ffB700;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #ffB700;
 }
 
 .content {
@@ -95,7 +100,7 @@ a, .btn-link {
     }
 
         .loading-progress circle:last-child {
-            stroke: #1b6ec2;
+            stroke: #ffb700;
             stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
             transition: stroke-dasharray 0.05s ease-in-out;
         }
@@ -109,4 +114,19 @@ a, .btn-link {
 
     .loading-progress-text:after {
         content: var(--blazor-load-percentage-text, "Loading");
+    }
+
+
+.app-numpad {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: 4rem;
+    gap: 0.7rem;
+}
+
+    .app-numpad > * {
+        display: grid;
+        align-items: center;
+        font-weight: bold;
+        font-size: 1.4rem;
     }

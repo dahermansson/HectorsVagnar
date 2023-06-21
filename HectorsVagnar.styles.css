@@ -10,7 +10,7 @@ main[b-zdtbq7k6t1] {
 }
 
 .sidebar[b-zdtbq7k6t1] {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    background-image: linear-gradient(180deg, #ffb700 0%, #ce9f1e 70%);
 }
 
 .top-row[b-zdtbq7k6t1] {
@@ -87,10 +87,10 @@ main[b-zdtbq7k6t1] {
 
 .top-row[b-212w5bnpr2] {
     height: 3.5rem;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.1);
 }
 
-.navbar-brand[b-212w5bnpr2] {
+.navbar-brand[b-212w5bnpr2]{
     font-size: 1.1rem;
 }
 
@@ -115,7 +115,7 @@ main[b-zdtbq7k6t1] {
     }
 
     .nav-item[b-212w5bnpr2]  a {
-        color: #d7d7d7;
+        color: black;
         border-radius: 4px;
         height: 3rem;
         display: flex;
@@ -125,12 +125,12 @@ main[b-zdtbq7k6t1] {
 
 .nav-item[b-212w5bnpr2]  a.active {
     background-color: rgba(255,255,255,0.25);
-    color: white;
+    color: black;
 }
 
 .nav-item[b-212w5bnpr2]  a:hover {
     background-color: rgba(255,255,255,0.1);
-    color: white;
+    color: black;
 }
 
 @media (min-width: 641px) {
