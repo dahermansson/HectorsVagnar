@@ -24,7 +24,7 @@ public partial class Index
     {
         if (CurrenInput != string.Empty && !Vagnar.Contains(CurrenInput))
         {
-            Vagnar.Add(CurrenInput);
+            Vagnar.Insert(0, CurrenInput);
             CurrenInput = string.Empty;
         }
     }
@@ -37,7 +37,7 @@ public partial class Index
     public async Task RemoveVagn(string vagn)
     {
         if (!await JSRuntime.InvokeAsync<bool>("confirm", new[] { "Är du säker?"}))
-            return;
+            await Task.CompletedTask;
         if(Vagnar.Contains(vagn))
             Vagnar.Remove(vagn);
     }

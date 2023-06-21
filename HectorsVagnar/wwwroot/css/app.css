@@ -12,13 +12,18 @@ a, .btn-link {
     color: #0f0f0f;
 }
 
-.btn-primary {
+.btn-primary, .btn-primary:focus {
     color: #0f0f0f;
     background-color: #ffB700;
     border-color: #ffB700;
 }
+.btn-primary:hover {
+    color: #0f0f0f;
+    background-color: #ce9f1e;
+    border-color: #ce9f1e;
+}
 
-.btn-danger {
+.btn-danger, .btn-danger:focus, .btn-danger:hover {
     color: #fff;
     background-color: #0f0f0f;
     border-color: #0f0f0f;
