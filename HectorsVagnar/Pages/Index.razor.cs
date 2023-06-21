@@ -8,8 +8,8 @@ public partial class Index
     private readonly List<string> Vagnar = new();
     private string Lok = "";
     private string CurrenInput { get; set; } = string.Empty;
-    private string EpostMallOlastat => String.Format("mailto:{0}?body={1}&subject=Lastat: {2}", Installningar?.Epost, GetMailFromMall(false), TagNr);
-    private string EpostMallLastat => String.Format("mailto:{0}?body={1}&subject=Lastat: {2}", Installningar?.Epost, GetMailFromMall(true), TagNr);
+    private string EpostMallOlastat => string.Format("mailto:{0}?body={1}&subject=Lastat: {2}", Installningar?.Epost, GetMailFromMall(false), TagNr);
+    private string EpostMallLastat => string.Format("mailto:{0}?body={1}&subject=Lastat: {2}", Installningar?.Epost, GetMailFromMall(true), TagNr);
     private string TagNr { get; set; } = string.Empty;
     private Installningar Installningar { get; set; } = null!;
     [Inject]
